@@ -1,5 +1,9 @@
 #include <iostream>
+#include <random>
 using namespace std;
+
+default_random_engine generator;
+uniform_int_distribution<int> distribution(0,100);
 
 void printEndMe();
 
@@ -12,9 +16,9 @@ int main() {
 	printEndMe();
 	cout << "\n How many ducks" << endl;
 	int ducks;
-	cin >> ducks;
-	if (ducks == 0)cout << "YOU MONSTER" << endl;
-	else cout << ducks << " that many ducks" << endl;
+	ducks = distribution(generator);
+	if (ducks == 0)cout << "YOU MONSTER no duck" << endl;
+	else cout << ducks << " : that many ducks" << endl;
 }
 
 void printEndMe()
