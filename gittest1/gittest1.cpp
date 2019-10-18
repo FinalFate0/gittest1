@@ -10,6 +10,11 @@ int main() {
 	cout << "To tylko beta";
 	cout << "Albo i az";
 	printEndMe();
+	cout << "\n How many ducks" << endl;
+	int ducks;
+	cin >> ducks;
+	if (ducks == 0)cout << "YOU MONSTER" << endl;
+	else cout << ducks << " that many ducks" << endl;
 }
 
 void printEndMe()
